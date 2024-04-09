@@ -1,4 +1,4 @@
-# linkedin_mobile_ui
+# Skill Fusion
 
 A new Flutter project.
 
