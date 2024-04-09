@@ -7,7 +7,6 @@ import 'package:linkedin_mobile_ui/theme/styles.dart';
 import 'package:linkedin_mobile_ui/widgets/button_container_widget.dart';
 import 'package:linkedin_mobile_ui/widgets/google_button_container_widget.dart';
 
-
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
 
@@ -28,11 +27,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SvgPicture.asset(
-                  "assets/app_logo_svg.svg",
-                  width: 50,
-                  height: 50,
-                ),
+                // SvgPicture.asset(
+                //   "assets/app_logo_svg.svg",
+                //   width: 50,
+                //   height: 50,
+                // ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -41,7 +40,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: Text(
                     "${onBoardingData[index].title}",
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(
@@ -96,8 +96,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: ButtonContainerWidget(
                     title: "Join now",
                     onTap: () {
-                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => SignUpPage()), (route) => false,);
-
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (_) => SignUpPage()),
+                        (route) => false,
+                      );
                     },
                   ),
                 ),
@@ -123,7 +126,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => SignInPage()), (route) => false,);
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (_) => SignInPage()),
+                        (route) => false,
+                      );
                     },
                     child: Text(
                       "Sign In",

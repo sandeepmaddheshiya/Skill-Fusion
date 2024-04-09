@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:linkedin_mobile_ui/theme/styles.dart';
 
@@ -17,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (_) => widget.child),
-            (route) => false,
+        (route) => false,
       );
     });
     super.initState();
